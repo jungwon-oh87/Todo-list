@@ -40,13 +40,14 @@ function removeList(id) {
     if (t.id === id) {
       to_do.splice(i, 1);
       console.log(to_do);
-      lists.innerHTML = ``;
     } else {
       addDOM(t);
     }
   });
 
   // re-draw
+  lists.innerHTML = "";
+  to_do.forEach(addDOM);
 }
 
 function init() {
